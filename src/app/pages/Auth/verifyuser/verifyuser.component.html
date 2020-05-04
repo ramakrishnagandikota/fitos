@@ -1,0 +1,57 @@
+<app-loader [showLoader]="showLoader"></app-loader>
+<section class="login-block">
+  <!-- Container-fluid starts -->
+  <div class="container-fluid">
+      <div class="row">
+
+
+<div class="col-sm-12" >
+
+  <div class="text-center">
+    <img src="../../../../assets//files/assets/images/logo.png" style="width: 120px;" class="logo" alt="Company's logo" />
+</div>
+          <form [formGroup]="verificationForm" (ngSubmit)="verifyUser()" class="md-float-material form-material" >
+                    <div class="auth-box card">
+
+                      <div class="p-20">
+                        <div class="alert alert-{{alert}}" *ngIf="errorDiv">{{errors}}</div>
+                       <!-- <div class="alert alert-danger" >{{errors}}</div> -->
+                          <div class="row m-b-10">
+                              <div class="col-md-12">
+                                  <h5 class="text-center txt-primary">Verify your self</h5>
+                              </div>
+                          </div>
+                          <!-- <p class="text-muted text-center p-b-5">Sign in with your regular account</p> -->
+                          <div class="form-group form-primary">
+                              <input type="text" readonly formControlName="verify_username" id="username" class="form-control" required="">
+                              <span class="form-bar"></span>
+                              <label class="float-label">Your Username<span class="red">*</span></label>
+                          </div>
+
+                          <div class="form-group form-primary">
+                            <input type="text" formControlName="code" id="code" class="form-control" required="">
+                            <span class="form-bar"></span>
+                            <label class="float-label">Enter code here<span class="red">*</span></label>
+                        </div>
+
+                        </div>
+
+                        <div class="row m-t-20">
+                          <div class="col-md-12 p-l-20 p-r-20">
+                              <button id="login-button" type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20 solid-button"  >Verify</button>
+                          </div>
+                      </div>
+
+                      </div>
+
+          </form>
+
+            </div>
+              <!-- Authentication card end -->
+          </div>
+          <!-- end of col-sm-12 -->
+      </div>
+      <!-- end of row -->
+
+  <!-- end of container-fluid -->
+</section>

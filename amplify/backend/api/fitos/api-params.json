@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "fitoslambda",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            }
+        }
+    ],
+    "resourceName": "fitos",
+    "apiName": "fitos",
+    "functionArns": [
+        {
+            "lambdaFunction": "fitoslambda"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-fitos-dev-124657-authRole",
+        "unAuthRoleName": "amplify-fitos-dev-124657-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "fitoslambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

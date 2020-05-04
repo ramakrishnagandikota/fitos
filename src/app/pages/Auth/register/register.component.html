@@ -1,0 +1,135 @@
+<app-loader [showLoader]="showLoader"></app-loader>
+<section class="login-block">
+  <!-- Container-fluid starts -->
+  <div class="container-fluid">
+      <div class="row">
+
+          <div class="col-sm-12"  >
+
+            <div class="text-center">
+              <img src="../../../../assets//files/assets/images/logo.png" style="width: 120px;" class="logo" alt="Company's logo" />
+          </div>
+                          <!-- Authentication card start -->
+              <form [formGroup]="regForm" (ngSubmit)="onSubmit()" class="md-float-material form-material" >
+
+                  <div class="auth-box card">
+
+                      <div class="p-20">
+                        <div class="alert alert-{{alert}}" *ngIf="errorDiv">{{errors}}</div>
+                          <div class="row m-b-10">
+                              <div class="col-md-12">
+                                  <h5 class="text-center txt-primary">Register</h5>
+                              </div>
+                          </div>
+                          <!-- <p class="text-muted text-center p-b-5">Sign in with your regular account</p> -->
+                          <div class="form-group form-primary">
+                              <input type="text" formControlName="username" id="username" class="form-control fill" required minlength="4" maxlength="15">
+                              <span class="form-bar"></span>
+                              <label class="float-label">Your Username<span class="red">*</span></label>
+<div *ngIf="this.f.username.invalid && (this.f.username.dirty || this.f.username.touched)">
+    <div *ngIf="this.f.username.errors.required" class="red">
+      Username is required.
+    </div>
+    <div *ngIf="this.f.username.errors.minlength" class="red">
+      Username must be at least 4 characters long.
+    </div>
+    <div *ngIf="this.f.username.errors.maxlength" class="red">
+      Username should not exceed 15 characters.
+    </div>
+</div>
+                          </div>
+                          <div class="form-group form-primary">
+                            <input type="email" formControlName="email" id="email" class="form-control fill" required  >
+                            <span class="form-bar"></span>
+                            <label class="float-label">Your Email Address<span class="red">*</span></label>
+<div *ngIf="this.f.email.invalid && (this.f.email.dirty || this.f.email.touched)">
+  <div *ngIf="this.f.email.errors.required" class="red">
+    Email is required.
+  </div>
+</div>
+                        </div>
+                          <div class="form-group form-primary">
+                              <input type="password" formControlName="password" id="password" class="form-control fill" required minlength="4" maxlength="25" >
+                              <span class="form-bar"></span>
+                              <label class="float-label">Password<span class="red">*</span></label>
+<div *ngIf="this.f.password.invalid && (this.f.password.dirty || this.f.password.touched)">
+  <div *ngIf="this.f.password.errors.required" class="red">
+    Password is required.
+  </div>
+
+  <div *ngIf="this.f.password.errors.minlength" class="red">
+    Password must be at least 4 characters long.
+  </div>
+
+  <div *ngIf="this.f.password.errors.maxlength" class="red">
+    Password should not exceed 25 characters.
+  </div>
+</div>
+                          </div>
+
+                          <div class="form-group form-primary">
+                            <input type="text" formControlName="phone_number" id="phone_number" class="form-control fill" required="">
+                            <span class="form-bar"></span>
+                            <label class="float-label">Phone Number<span class="red">*</span></label>
+<div *ngIf="this.f.phone_number.invalid && (this.f.phone_number.dirty || this.f.phone_number.touched)">
+  <div *ngIf="this.f.phone_number.errors.required" class="red">
+    Phone number is required.
+  </div>
+
+</div>
+                        </div>
+
+                          <div class="form-group row" >
+                              <div class="col-sm-12">
+                                  <select  id="LoginRole" formControlName="role" class="form-control fill">
+                                      <option value="0" selected >Select Role<span class="red">*</span></option>
+                                      <option value="TechnicalDesigner">Technical Designer</option>
+                                      <option value="FashionEntrepreneur">Fashion Entrepreneur</option>
+                                      <option value="PatternMaker">Pattern Maker</option>
+                                      <option value="FabricSupplier">Fabric Supplier</option>
+                                      <option value="TrimSupplier">Trim Supplier</option>
+                                      <option value="Factory">Factory</option>
+                                      <option value="CertificationTestingAgency">Certification & Testing Agency</option>
+                                      <option value="Guest">Guest</option>
+                                  </select>
+                              </div>
+                          </div>
+                         <div class="col-12">
+                              <div class="checkbox-fade fade-in-primary d-">
+                                  <label>
+                                      <input type="checkbox" value="1" formControlName="terms_and_conditions" required >
+                                      <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
+                                      <span class="text-inverse">I have read and accept the Terms & Conditions</span>
+<div *ngIf="this.f.terms_and_conditions.invalid">
+  <div *ngIf="this.f.terms_and_conditions.errors.required" class="red">
+    Terms & conditions is required.
+  </div>
+
+</div>
+                                  </label>
+
+                              </div>
+
+                          </div>
+
+                          </div>
+                          <div class="row m-t-20">
+                              <div class="col-md-12 p-l-20 p-r-20">
+                                  <button id="login-button" type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20 solid-button"  >Register</button>
+                              </div>
+                          </div>
+                          <p class="text-inverse text-center">Already have an account?<a [routerLink]="['/auth/login']" routerLinkActive="router-link-active" style="color: #0d665c"> <b>Login here </b></a></p>
+                      </div>
+
+              </form>
+                  <!-- end of form -->
+                </div>
+
+              <!-- Authentication card end -->
+          </div>
+          <!-- end of col-sm-12 -->
+      </div>
+      <!-- end of row -->
+
+  <!-- end of container-fluid -->
+</section>

@@ -1,0 +1,21 @@
+{
+    "appName": "fitos",
+    "roleName": "pinpointLambdaRole95df431b",
+    "cloudformationPolicyName": "cloudformationPolicy95df431b",
+    "cloudWatchPolicyName": "cloudWatchPolicy95df431b",
+    "pinpointPolicyName": "pinpointPolicy95df431b",
+    "authPolicyName": "pinpoint_amplify_95df431b",
+    "unauthPolicyName": "pinpoint_amplify_95df431b",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

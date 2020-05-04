@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-fitos-dev-124657-authRole",
+            "UnauthRoleArn": "arn:aws:iam::479796044641:role/amplify-fitos-dev-124657-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::479796044641:role/amplify-fitos-dev-124657-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-fitos-dev-124657-deployment",
+            "UnauthRoleName": "amplify-fitos-dev-124657-unauthRole",
+            "StackName": "amplify-fitos-dev-124657",
+            "StackId": "arn:aws:cloudformation:us-east-1:479796044641:stack/amplify-fitos-dev-124657/435a6da0-8920-11ea-a6e3-0ed2247e0ea9",
+            "AmplifyAppId": "d26dwxf49jqj59"
+        },
+        "categories": {
+            "auth": {
+                "fitos7eb566b0": {}
+            }
+        }
+    }
+}
